@@ -1,0 +1,46 @@
+{% extends "admin/base.html" %}
+
+{% block title %}News RSS Aggregator - Добавить чат{% endblock %}
+
+{% block content %}
+<section class="telegram-chat-form">
+  <h2 class="telegram-chat-form__title">Добавить чат</h2>
+
+  <form class="telegram-chat-form__form" id="telegram-chat-form">
+    <div class="telegram-chat-form__field">
+      <label class="telegram-chat-form__label" for="chat_id">ID Чата</label>
+      <input
+        class="telegram-chat-form__input"
+        id="chat_id"
+        name="chat_id"
+        type="number"
+        required
+      />
+    </div>
+
+    <div class="telegram-chat-form__field">
+      <label class="telegram-chat-form__label" for="title">Название</label>
+      <input
+        class="telegram-chat-form__input"
+        id="title"
+        name="title"
+        type="text"
+      />
+    </div>
+
+    <div class="telegram-chat-form__field">
+      <label class="telegram-chat-form__label" for="is_active">Активен</label>
+      <input
+        class="telegram-chat-form__checkbox"
+        id="is_active"
+        name="is_active"
+        type="checkbox"
+      />
+    </div>
+
+    <div class="telegram-chat-form__actions">
+      <button class="button" type="submit">Сохранить</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

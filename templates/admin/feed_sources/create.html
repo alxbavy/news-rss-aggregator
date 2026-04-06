@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+
+{% block title %}News RSS Aggregator - Добавить источник{% endblock %}
+
+{% block content %}
+<section class="feed-form">
+  <h2 class="feed-form__title">Добавить источник</h2>
+
+  <form class="feed-form__form" id="feed-source-form">
+    <div class="feed-form__field">
+      <label class="feed-form__label" for="name">Название</label>
+      <input class="feed-form__input" id="name" name="name" type="text" required />
+    </div>
+
+    <div class="feed-form__field">
+      <label class="feed-form__label" for="url">URL</label>
+      <input class="feed-form__input" id="url" name="url" type="url" required />
+    </div>
+
+    <div class="feed-form__field">
+      <label class="feed-form__label" for="is_active">Активен</label>
+      <input class="feed-form__checkbox" id="is_active" name="is_active" type="checkbox" />
+    </div>
+
+    <div class="feed-form__actions">
+      <button class="button" type="submit">Сохранить</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

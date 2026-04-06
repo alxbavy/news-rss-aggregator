@@ -1,0 +1,33 @@
+{% extends "admin/base.html" %}
+
+{% block title %}News RSS Aggregator - Источники{% endblock %}
+
+{% block content %}
+<section class="feed-sources">
+  <div class="feed-sources__header">
+    <h2 class="feed-sources__title">Источники</h2>
+    <a class="feed-sources__create-link" href="/admin/feed-sources/create">
+      Добавить
+    </a>
+  </div>
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__row">
+        <th class="table__cell">Название</th>
+        <th class="table__cell">URL</th>
+        <th class="table__cell">Активен</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+      {% for item in items %}
+      <tr class="table__row">
+        <td class="table__cell">{{ item.name }}</td>
+        <td class="table__cell">{{ item.url }}</td>
+        <td class="table__cell">{{ item.is_active }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}
