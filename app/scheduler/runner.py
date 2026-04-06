@@ -6,6 +6,7 @@ from app.core.logging import setup_logging
 from app.db.session import SessionLocal
 from app.integrations.rss_parser import RSSParser
 from app.integrations.telegram_notifier import TelegramNotifier
+from app.repositories.storage import Storage
 from app.services.feed_polling import FeedPollingService
 
 setup_logging()
@@ -22,7 +23,7 @@ def run_scheduler() -> None:
         session = SessionLocal()
         try:
             parser = RSSParser()
-            storage = None
+            storage = Storage(session)
             notifier = TelegramNotifier(
                 bot_token=settings.telegram_bot_token.get_secret_value(),
             )
