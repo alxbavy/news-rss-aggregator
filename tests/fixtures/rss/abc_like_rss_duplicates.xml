@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ABC-like feed with duplicates</title>
+    <link>https://news.example.com/</link>
+    <description>Duplicate items by guid</description>
+
+    <item>
+      <title>Duplicate candidate story</title>
+      <link>https://news.example.com/world/duplicate-story</link>
+      <guid isPermaLink="false">duplicate-guid-1</guid>
+      <pubDate>Mon, 06 Apr 2026 08:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Duplicate candidate story updated title</title>
+      <link>https://news.example.com/world/duplicate-story?utm_source=rss</link>
+      <guid isPermaLink="false">duplicate-guid-1</guid>
+      <pubDate>Mon, 06 Apr 2026 08:05:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Unique story</title>
+      <link>https://news.example.com/world/unique-story</link>
+      <guid isPermaLink="false">unique-guid-1</guid>
+      <pubDate>Mon, 06 Apr 2026 09:10:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sky-like feed</title>
+    <link>https://news.example.com/</link>
+    <description>RSS feed without pubDate</description>
+
+    <item>
+      <title>Sky-like story without publication date</title>
+      <link>https://news.example.com/uk/story-without-date</link>
+      <guid isPermaLink="false">sky-story-001</guid>
+    </item>
+  </channel>
+</rss>

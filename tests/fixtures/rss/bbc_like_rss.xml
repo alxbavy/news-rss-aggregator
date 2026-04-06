@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>BBC-like feed</title>
+    <link>https://news.example.com/</link>
+    <description>Example RSS 2.0 feed</description>
+
+    <item>
+      <title>BBC-like story one</title>
+      <link>https://news.example.com/world/story-1</link>
+      <guid>https://news.example.com/world/story-1</guid>
+      <pubDate>Mon, 06 Apr 2026 09:30:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>BBC-like story two</title>
+      <link>https://news.example.com/world/story-2</link>
+      <guid>https://news.example.com/world/story-2</guid>
+      <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
