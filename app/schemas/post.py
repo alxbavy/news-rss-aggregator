@@ -8,6 +8,7 @@ class PostBase(BaseModel):
     title: str
     link: HttpUrl
     published_at: datetime | None = None
+    content_hash: str
 
 
 class PostCreate(PostBase):
