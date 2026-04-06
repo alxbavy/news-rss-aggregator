@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     app_name: str = "news-rss-aggregator"
-    database_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/news_rss_aggregator"
+    database_url: str
     telegram_bot_token: SecretStr
     poll_interval_seconds: int = 60
 
