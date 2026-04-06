@@ -27,4 +27,33 @@
     </div>
   </form>
 </section>
+
+<script>
+  const feedSourceForm = document.getElementById("feed-source-form");
+
+  feedSourceForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const payload = {
+      name: document.getElementById("name").value,
+      url: document.getElementById("url").value,
+      is_active: document.getElementById("is_active").checked,
+    };
+
+    const response = await fetch("/api/v1/feed-sources", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (response.ok) {
+      window.location.href = "/admin/feed-sources";
+      return;
+    }
+
+    alert("Не удалось создать источник");
+  });
+</script>
 {% endblock %}
